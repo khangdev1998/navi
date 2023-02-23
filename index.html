@@ -46,6 +46,26 @@
     <div class="phone">
       <div class="quick-alo-ph-circle-fill"></div>
       <div class="quick-alo-ph-img-circle"></div>
+      <!-- <div class="phone-message">
+          <div class="phone-item">
+            <img class="phone-item__icon" src="./images/icon-phone.png" alt="this-is-icon">
+            <span class="phone-item__text">
+              Hotline: (028) 7100 8998
+            </span>
+          </div>
+          <div class="phone-item">
+            <img class="phone-item__icon" src="./images/icon-message.png" alt="this-is-icon">
+            <span class="phone-item__text">
+              Messenger
+            </span>
+          </div>
+          <div class="phone-item">
+            <img class="phone-item__icon" src="./images/icon-phone.png" alt="this-is-icon">
+            <span class="phone-item__text">
+              Hotline: (028) 7100 8998
+            </span>
+          </div>
+        </div> -->
     </div>
 
     <div class="header">
@@ -75,9 +95,9 @@
             </div>
           </div>
           <div class="header-right">
-            <span class="header-right__text">Chi Nhánh</span>
+            <a href="#!" class="header-right__text">Chi Nhánh</a>
             <span class="header-right__gap"> | </span>
-            <span class="header-right__text">Câu hỏi thường gặp</span>
+            <a href="#!" class="header-right__text">Câu hỏi thường gặp</a>
           </div>
         </div>
         <div class="header-main">
@@ -130,7 +150,22 @@
                 src="./images/icon-user.png"
                 alt="this-is-icon-user"
               />
-              Đăng nhập
+              <span class="header-login__text">Đăng nhập</span>
+
+              <ul class="header-login__list">
+                <li class="header-login__list-triangle"></li>
+                <li class="header-login__list-item">Facebook</li>
+                <li
+                  class="header-login__list-item header-login__list-item--orange"
+                >
+                  Đăng nhập
+                </li>
+                <li
+                  class="header-login__list-item header-login__list-item--orange"
+                >
+                  Tạo tài khoản
+                </li>
+              </ul>
             </a>
 
             <div class="header-cart">
@@ -149,7 +184,7 @@
     <div class="hero">
       <div class="container hero__container">
         <div class="hero-content">
-          <h1 class="hero-content__title">Đem công nghệ đến mọi nhà</h1>
+          <h1 class="heading">Đem công nghệ đến mọi nhà</h1>
           <p class="hero-content__desc">
             Với 10 năm hoạt động, đặc biệt là trong lĩnh vực an ninh, camera
             quan sát, tổng đài điện thoại và hệ thống mạng LAN, Viễn Thông Vina
@@ -174,7 +209,7 @@
             alt="this-is-bg"
           />
           <div class="client-bg__content">
-            <h1 class="client-bg__content-title">
+            <h1 class="heading">
               4 lý do giúp khách hàng tin tưởng lựa chọn chúng tôi
             </h1>
             <a href="#!" class="btn">Tìm hiểu thêm</a>
@@ -253,7 +288,7 @@
 
     <div class="services">
       <div class="container">
-        <div class="services-title">Dịch vụ nổi bật</div>
+        <div class="heading">Dịch vụ nổi bật</div>
         <div class="owl-carousel owl-theme">
           <div class="services-item item">
             <img
@@ -437,6 +472,434 @@
               <a class="services-content__more" href="#!"> Xem dịch vụ </a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <div class="container">
+        <h1 class="heading heading--dark">Danh mục sản phẩm</h1>
+
+        <div class="category-wrapper">
+          <a href="#!" class="category-left">
+            <img
+              class="category-left__image"
+              src="https://admin.vienthongvina.com/storage/media/j9EycI2ZnABXAtee6DRXT5BENyrnHhuQovdyis0G.jpeg"
+              alt="this-is-image"
+            />
+            <div class="category-content">
+              <h4 class="category-content__title">Camera Quan Sát</h4>
+              <p class="category-content__count">1475 sản phẩm</p>
+            </div>
+          </a>
+          <div class="category-right">
+            <a href="#!" class="category-right__item">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                alt="this-is-image"
+                class="category-right__item-image"
+              />
+
+              <div class="category-content">
+                <h4 class="category-content__title">Khóa cửa thông minh</h4>
+                <p class="category-content__count">12 sản phẩm</p>
+              </div>
+            </a>
+            <a href="#!" class="category-right__item">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                alt="this-is-image"
+                class="category-right__item-image"
+              />
+
+              <div class="category-content">
+                <h4 class="category-content__title">Khóa cửa thông minh</h4>
+                <p class="category-content__count">12 sản phẩm</p>
+              </div>
+            </a>
+            <a href="#!" class="category-right__item">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                alt="this-is-image"
+                class="category-right__item-image"
+              />
+
+              <div class="category-content">
+                <h4 class="category-content__title">Khóa cửa thông minh</h4>
+                <p class="category-content__count">12 sản phẩm</p>
+              </div>
+            </a>
+            <a href="#!" class="category-right__item">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                alt="this-is-image"
+                class="category-right__item-image"
+              />
+
+              <div class="category-content">
+                <h4 class="category-content__title">Khóa cửa thông minh</h4>
+                <p class="category-content__count">12 sản phẩm</p>
+              </div>
+            </a>
+            <a href="#!" class="category-right__item">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                alt="this-is-image"
+                class="category-right__item-image"
+              />
+
+              <div class="category-content">
+                <h4 class="category-content__title">Khóa cửa thông minh</h4>
+                <p class="category-content__count">12 sản phẩm</p>
+              </div>
+            </a>
+            <a href="#!" class="category-right__item">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                alt="this-is-image"
+                class="category-right__item-image"
+              />
+
+              <div class="category-content">
+                <h4 class="category-content__title">Khóa cửa thông minh</h4>
+                <p class="category-content__count">12 sản phẩm</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="container product__container">
+        <div class="heading heading--dark">Sản phẩm nổi bật</div>
+        <div class="product-wrapper">
+          <a href="#!" class="product-item">
+            <div class="product-item__image">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
+                alt="this-is-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <div class="product-content__top">
+                <h4 class="product-content__top-title">
+                  <span>
+                    Trọn bộ 4 Camera HIKVISION FULL HD 2MP + ổ cứng lưu trữ
+                  </span>
+                </h4>
+              </div>
+
+              <div class="product-content__bottom">
+                <h4 class="product-content__bottom-title">Camera Quan Sát</h4>
+                <div class="product-content__bottom-price">
+                  <span>3.190.000đ</span>
+                  <s>3.400.000đ</s>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#!" class="product-item">
+            <div class="product-item__image">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
+                alt="this-is-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <div class="product-content__top">
+                <h4 class="product-content__top-title">
+                  <span>
+                    Trọn bộ 4 Camera HIKVISION FULL HD 2MP + ổ cứng lưu trữ
+                  </span>
+                </h4>
+              </div>
+
+              <div class="product-content__bottom">
+                <h4 class="product-content__bottom-title">Camera Quan Sát</h4>
+                <div class="product-content__bottom-price">
+                  <span>3.190.000đ</span>
+                  <s>3.400.000đ</s>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#!" class="product-item">
+            <div class="product-item__image">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
+                alt="this-is-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <div class="product-content__top">
+                <h4 class="product-content__top-title">
+                  <span>
+                    Trọn bộ 4 Camera HIKVISION FULL HD 2MP + ổ cứng lưu trữ
+                  </span>
+                </h4>
+              </div>
+
+              <div class="product-content__bottom">
+                <h4 class="product-content__bottom-title">Camera Quan Sát</h4>
+                <div class="product-content__bottom-price">
+                  <span>3.190.000đ</span>
+                  <s>3.400.000đ</s>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#!" class="product-item">
+            <div class="product-item__image">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
+                alt="this-is-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <div class="product-content__top">
+                <h4 class="product-content__top-title">
+                  <span>
+                    Trọn bộ 4 Camera HIKVISION FULL HD 2MP + ổ cứng lưu trữ
+                  </span>
+                </h4>
+              </div>
+
+              <div class="product-content__bottom">
+                <h4 class="product-content__bottom-title">Camera Quan Sát</h4>
+                <div class="product-content__bottom-price">
+                  <span>3.190.000đ</span>
+                  <s>3.400.000đ</s>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#!" class="product-item">
+            <div class="product-item__image">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
+                alt="this-is-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <div class="product-content__top">
+                <h4 class="product-content__top-title">
+                  <span>
+                    Trọn bộ 4 Camera HIKVISION FULL HD 2MP + ổ cứng lưu trữ
+                  </span>
+                </h4>
+              </div>
+
+              <div class="product-content__bottom">
+                <h4 class="product-content__bottom-title">Camera Quan Sát</h4>
+                <div class="product-content__bottom-price">
+                  <span>3.190.000đ</span>
+                  <s>3.400.000đ</s>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#!" class="product-item">
+            <div class="product-item__image">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
+                alt="this-is-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <div class="product-content__top">
+                <h4 class="product-content__top-title">
+                  <span>
+                    Trọn bộ 4 Camera HIKVISION FULL HD 2MP + ổ cứng lưu trữ
+                  </span>
+                </h4>
+              </div>
+
+              <div class="product-content__bottom">
+                <h4 class="product-content__bottom-title">Camera Quan Sát</h4>
+                <div class="product-content__bottom-price">
+                  <span>3.190.000đ</span>
+                  <s>3.400.000đ</s>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#!" class="product-item">
+            <div class="product-item__image">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
+                alt="this-is-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <div class="product-content__top">
+                <h4 class="product-content__top-title">
+                  <span>
+                    Trọn bộ 4 Camera HIKVISION FULL HD 2MP + ổ cứng lưu trữ
+                  </span>
+                </h4>
+              </div>
+
+              <div class="product-content__bottom">
+                <h4 class="product-content__bottom-title">Camera Quan Sát</h4>
+                <div class="product-content__bottom-price">
+                  <span>3.190.000đ</span>
+                  <s>3.400.000đ</s>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#!" class="product-item">
+            <div class="product-item__image">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
+                alt="this-is-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <div class="product-content__top">
+                <h4 class="product-content__top-title">
+                  <span>
+                    Trọn bộ 4 Camera HIKVISION FULL HD 2MP + ổ cứng lưu trữ
+                  </span>
+                </h4>
+              </div>
+
+              <div class="product-content__bottom">
+                <h4 class="product-content__bottom-title">Camera Quan Sát</h4>
+                <div class="product-content__bottom-price">
+                  <span>3.190.000đ</span>
+                  <s>3.400.000đ</s>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#!" class="product-item">
+            <div class="product-item__image">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
+                alt="this-is-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <div class="product-content__top">
+                <h4 class="product-content__top-title">
+                  <span>
+                    Trọn bộ 4 Camera HIKVISION FULL HD 2MP + ổ cứng lưu trữ
+                  </span>
+                </h4>
+              </div>
+
+              <div class="product-content__bottom">
+                <h4 class="product-content__bottom-title">Camera Quan Sát</h4>
+                <div class="product-content__bottom-price">
+                  <span>3.190.000đ</span>
+                  <s>3.400.000đ</s>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#!" class="product-item">
+            <div class="product-item__image">
+              <img
+                src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
+                alt="this-is-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <div class="product-content__top">
+                <h4 class="product-content__top-title">
+                  <span>
+                    Trọn bộ 4 Camera HIKVISION FULL HD 2MP + ổ cứng lưu trữ
+                  </span>
+                </h4>
+              </div>
+
+              <div class="product-content__bottom">
+                <h4 class="product-content__bottom-title">
+                  Camera Quan SátCamera Quan SátCamera Quan SáCamera Quan
+                  SáCamera Quan SáCamera Quan SáCamera Quan Sát
+                </h4>
+                <div class="product-content__bottom-price">
+                  <span>3.190.000đ</span>
+                  <s>3.400.000đ</s>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <a href="#!" class="btn">Tất cả sản phẩm</a>
+      </div>
+    </div>
+
+    <div class="partner">
+      <div class="container">
+        <div class="heading heading--dark">Đối tác của chúng tôi</div>
+      </div>
+    </div>
+
+    <div class="work">
+      <div class="container work__container">
+        <div class="work-left">
+          <h1 class="heading heading--dark">
+            Quy trình làm việc của chúng tôi
+          </h1>
+          <div class="work-left__item">
+            <span class="work-left__item-text"> 01 </span>
+            <h2 class="work-left__item-text">
+              Tìm hiểu nhu cầu thực tế từ khách hàng
+            </h2>
+          </div>
+          <div class="work-left__item">
+            <span class="work-left__item-text"> 02 </span>
+            <h2 class="work-left__item-text">
+              Tư vấn giải pháp, thiết bị phù hợp, tiết kiệm nhất
+            </h2>
+          </div>
+          <div class="work-left__item">
+            <span class="work-left__item-text"> 03 </span>
+            <h2 class="work-left__item-text">Khảo sát tận nơi cẩn thận</h2>
+          </div>
+          <div class="work-left__item">
+            <span class="work-left__item-text"> 04 </span>
+            <h2 class="work-left__item-text">Lên phương án thi công</h2>
+          </div>
+          <div class="work-left__item">
+            <span class="work-left__item-text"> 05 </span>
+            <h2 class="work-left__item-text">
+              Báo giá trọn gói toàn bộ hệ thống
+            </h2>
+          </div>
+          <div class="work-left__item">
+            <span class="work-left__item-text"> 06 </span>
+            <h2 class="work-left__item-text">
+              Thi công và nghiệm thu, thanh toán
+            </h2>
+          </div>
+          <div class="work-left__item">
+            <span class="work-left__item-text"> 07 </span>
+            <h2 class="work-left__item-text">Bảo trì, hậu mãi</h2>
+          </div>
+
+          <a href="#!" class="btn">Nhận tư vấn ngay</a>
+        </div>
+        <div class="work-right">
+          <img
+            src="https://vienthongvina.com/_nuxt/img/homepage-procedure.ac98815.png"
+            alt="this-is-image"
+            class="work-right__image"
+          />
         </div>
       </div>
     </div>
