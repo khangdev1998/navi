@@ -1,7 +1,7 @@
 const left = `<img class="services-icon" src="./images/prev.png" alt="this-is-icon">`;
 const right = `<img class="services-icon" src="./images/next.png" alt="this-is-icon">`;
 
-$(".owl-carousel").owlCarousel({
+$(".services .owl-carousel").owlCarousel({
   loop: true,
   autoplay: true,
   smartSpeed: 500,
@@ -24,6 +24,27 @@ $(".owl-carousel").owlCarousel({
     },
   },
 });
+
+$('.partner .owl-carousel').owlCarousel({
+  loop:true,
+  autoplay: true,
+  smartSpeed: 900,
+  margin:110,
+  nav:true,
+  autoplayTimeout: 2800,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:6
+      }
+  }
+})
+
 
 const upTop = document.getElementById("up-top");
 
