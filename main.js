@@ -16,35 +16,65 @@ $(".services .owl-carousel").owlCarousel({
     0: {
       items: 1,
     },
-    600: {
+    500: {
+      items: 2,
+    },
+    800: {
       items: 3,
     },
-    1000: {
+    1200: {
       items: 4,
     },
   },
 });
 
-$('.partner .owl-carousel').owlCarousel({
-  loop:true,
+$(".partner .owl-carousel").owlCarousel({
+  loop: true,
   autoplay: true,
-  smartSpeed: 900,
-  margin:110,
-  nav:true,
   autoplayTimeout: 2800,
-  responsive:{
-      0:{
-          items:1
-      },
-      600:{
-          items:3
-      },
-      1000:{
-          items:6
-      }
-  }
-})
+  smartSpeed: 900,
+  nav: false,
+  dots: false,
+  responsive: {
+    0: {
+      items: 2,
+      margin: 20,
+    },
+    300: {
+      items: 3,
+      margin: 20,
+    },
+    600: {
+      items: 4,
+      margin: 60,
+    },
+    1024: {
+      items: 5,
+      margin: 60,
+    },
+    1200: {
+      margin: 110,
+      items: 6,
+    },
+  },
+});
 
+$(".slider .owl-carousel").owlCarousel({
+  navText: [left, right],
+  loop: true,
+  margin: 12,
+  nav: true,
+  dots: true,
+  autoplay: true,
+  autoplayTimeout: 4200,
+  smartSpeed: 900,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+  },
+});
 
 const upTop = document.getElementById("up-top");
 
@@ -83,3 +113,25 @@ window.addEventListener(
     };
   }, 100)
 );
+
+const iconMenu = document.querySelector(".header-icons__bars");
+const iconClose = document.querySelector(".header-menu__close");
+const headerMenu = document.querySelector(".header-menu");
+const overlay = document.querySelector(".overlay");
+const iconSearch = document.querySelector(".header-icons__search");
+const searchMobile = document.querySelector(".search-mobile");
+
+iconMenu.onclick = function () {
+  headerMenu.classList.add("active");
+  overlay.classList.add("show");
+};
+iconClose.onclick = function () {
+  headerMenu.classList.remove("active");
+  overlay.classList.remove("show");
+};
+iconSearch.onclick = function () {
+  searchMobile.classList.add("show");
+  searchMobile.onclick = function (event) {
+    event.target.classList.remove("show");
+  };
+};

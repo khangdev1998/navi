@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  overflow-x: hidden;
+}
+body {
+  font-size: 16px;
+  color: var(--dark-color);
+  line-height: 1.5;
+}
+html {
+  font-family: Nunito Sans, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+:root {
+  --primary-color: #ff5100;
+  --light-color: #ffff;
+}
+/* Global class element */
+.container {
+  padding: 0 15px;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 1536px;
+    padding: 0 80px;
+    margin: 0 auto;
+  }
+}
+.btn {
+  color: var(--light-color);
+  background: var(--primary-color);
+  border-radius: 4px;
+  line-height: 28px;
+  padding: 11px 40px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+}
+.btn:hover {
+  background: #db3700;
+  transition: linear 0.2s;
+}
+/* Global class element */
+
+.cart {
+  padding: 80px 0;
+  background-color: #f3f4f6;
+}
+.cart .cart-title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36.4px;
+  margin-right: 4px;
+}
+.cart .cart-count {
+  font-size: 18px;
+}
+.cart .cart-content {
+  text-align: center;
+  background-color: var(--light-color);
+  padding: 32px 12px;
+  margin-top: 24px;
+}
+.cart .cart-content img {
+  max-width: 100%;
+}
+.cart .cart-content__desc {
+  padding-bottom: 32px;
+}

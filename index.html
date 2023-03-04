@@ -8,7 +8,8 @@
       VIỄN THÔNG VINA - Camera, Khóa cửa, Chuông cửa, Mạng LAN, Tổng đài điện
       thoại, Báo trộm báo cháy...
     </title>
-    <link rel="stylesheet" href="./app.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/app-responsive.css" />
     <link rel="icon" href="images/favicon.ico" type="image/gif" />
     <link
       rel="stylesheet"
@@ -26,6 +27,7 @@
     />
   </head>
   <body>
+    <div class="overlay"></div>
     <div id="up-top">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,26 +48,39 @@
     <div class="phone">
       <div class="quick-alo-ph-circle-fill"></div>
       <div class="quick-alo-ph-img-circle"></div>
-      <!-- <div class="phone-message">
-          <div class="phone-item">
-            <img class="phone-item__icon" src="./images/icon-phone.png" alt="this-is-icon">
-            <span class="phone-item__text">
-              Hotline: (028) 7100 8998
-            </span>
-          </div>
-          <div class="phone-item">
-            <img class="phone-item__icon" src="./images/icon-message.png" alt="this-is-icon">
-            <span class="phone-item__text">
-              Messenger
-            </span>
-          </div>
-          <div class="phone-item">
-            <img class="phone-item__icon" src="./images/icon-phone.png" alt="this-is-icon">
-            <span class="phone-item__text">
-              Hotline: (028) 7100 8998
-            </span>
-          </div>
-        </div> -->
+      <div class="phone-message">
+        <a href="tel: 02871008998" class="phone-item">
+          <img
+            class="phone-item__icon"
+            src="./images/icon-phone.png"
+            alt="this-is-icon"
+          />
+          <span class="phone-item__text"> Hotline: (028) 7100 8998 </span>
+        </a>
+        <a href="#!" class="phone-item">
+          <img
+            class="phone-item__icon"
+            src="./images/icon-message.png"
+            alt="this-is-icon"
+          />
+          <span class="phone-item__text"> Messenger </span>
+        </a>
+        <a href="tel: 02871008998" class="phone-item">
+          <img
+            class="phone-item__icon"
+            src="./images/icon-zalo.png"
+            alt="this-is-icon"
+          />
+          <span class="phone-item__text"> Hotline: (028) 7100 8998 </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="search-mobile">
+      <div class="search-mobile__wrapper">
+        <input type="text" placeholder="Tìm kiếm..." />
+        <img src="./images/search-glass.png" alt="this-is-icon" />
+      </div>
     </div>
 
     <div class="header">
@@ -113,26 +128,49 @@
             <img src="./images/logo.png" alt="this-is-logo" />
           </a>
           <div class="header-menu">
+            <img
+              class="header-menu__close"
+              src="./images/close.png"
+              alt="this-is-icon"
+            />
             <ul class="header-menu__list">
               <li class="header-menu__item">
-                <a href="#!" class="header-menu__link">Giới thiệu</a>
+                <a href="gioi-thieu.html" class="header-menu__link"
+                  >Giới thiệu</a
+                >
               </li>
               <li class="header-menu__item">
-                <a href="#!" class="header-menu__link">Sản phẩm</a>
+                <a href="san-pham.html" class="header-menu__link">Sản phẩm</a>
               </li>
               <li class="header-menu__item">
-                <a href="#!" class="header-menu__link">Dịch vụ</a>
+                <a href="dich-vu.html" class="header-menu__link">Dịch vụ</a>
               </li>
               <li class="header-menu__item">
-                <a href="#!" class="header-menu__link">Dự án</a>
+                <a href="du-an.html" class="header-menu__link">Dự án</a>
               </li>
               <li class="header-menu__item">
-                <a href="#!" class="header-menu__link">Blog</a>
+                <a href="blog.html" class="header-menu__link">Blog</a>
               </li>
               <li class="header-menu__item">
                 <a href="#!" class="header-menu__link">Thêm</a>
+                <ul class="header-menuChildren">
+                  <li><a href="#!">Liên hệ</a></li>
+                  <li><a href="#!">Tuyển dụng</a></li>
+                  <li><a href="#!">Quy định bảo hành</a></li>
+                  <li><a href="#!">Câu hỏi thường gặp</a></li>
+                </ul>
               </li>
             </ul>
+
+            <div class="header-menu__login">
+              <a href="#!" class="header-menu__login-link header-menu__login-link--fb">Facebook</a>
+              <a class="header-menu__login-link" href="#!">
+                <img src="./images/log-in.png" alt="this-is-icon" /> Đăng nhập
+              </a>
+              <a class="header-menu__login-link" href="#!">
+                <img src="./images/icon-user.png" alt="this-is-icon" /> Tạo tài khoản
+              </a>
+            </div>
           </div>
           <div class="header-wrapper">
             <div class="header-search">
@@ -170,14 +208,37 @@
                 </li>
               </ul>
             </a>
-            <div class="header-cart">
+            <a href="gio-hang.html" class="header-cart">
               <img
                 class="header__cart-icon"
                 src="./images/icon-cart.png"
                 alt="this-is-icon-cart"
               />
               <div class="header__cart-count">0</div>
-            </div>
+            </a>
+          </div>
+          <div class="header-icons">
+            <a href="#!">
+              <img
+                class="header-icons__search"
+                src="images/icon-search.png"
+                alt="this-is-icon-search"
+              />
+            </a>
+            <a href="gio-hang.html">
+              <img
+                class="header-icons__cart"
+                src="./images/icon-cart.png"
+                alt="this-is-icon-cart"
+              />
+            </a>
+            <a href="#!">
+              <img
+                class="header-icons__bars"
+                src="./images/menu-mobile.png"
+                alt="this-is-icon-bars"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -193,7 +254,7 @@
             tự tin là đơn vị cung cấp các sản phẩm, dịch vụ hàng đầu trong ngành
             và được tin dùng bởi nhiều khách hàng trên toàn quốc.
           </p>
-          <a href="#!" class="btn"> Tìm hiểu thêm </a>
+          <a href="gioi-thieu.html" class="btn"> Tìm hiểu thêm </a>
         </div>
 
         <div class="hero-image">
@@ -496,11 +557,12 @@
           </a>
           <div class="category-right">
             <a href="#!" class="category-right__item">
-              <img
-                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
-                alt="this-is-image"
-                class="category-right__item-image"
-              />
+              <div class="category-right__item-image">
+                <img
+                  src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                  alt="this-is-image"
+                />
+              </div>
 
               <div class="category-content">
                 <h4 class="category-content__title">Khóa cửa thông minh</h4>
@@ -508,11 +570,12 @@
               </div>
             </a>
             <a href="#!" class="category-right__item">
-              <img
-                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
-                alt="this-is-image"
-                class="category-right__item-image"
-              />
+              <div class="category-right__item-image">
+                <img
+                  src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                  alt="this-is-image"
+                />
+              </div>
 
               <div class="category-content">
                 <h4 class="category-content__title">Khóa cửa thông minh</h4>
@@ -520,11 +583,12 @@
               </div>
             </a>
             <a href="#!" class="category-right__item">
-              <img
-                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
-                alt="this-is-image"
-                class="category-right__item-image"
-              />
+              <div class="category-right__item-image">
+                <img
+                  src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                  alt="this-is-image"
+                />
+              </div>
 
               <div class="category-content">
                 <h4 class="category-content__title">Khóa cửa thông minh</h4>
@@ -532,11 +596,12 @@
               </div>
             </a>
             <a href="#!" class="category-right__item">
-              <img
-                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
-                alt="this-is-image"
-                class="category-right__item-image"
-              />
+              <div class="category-right__item-image">
+                <img
+                  src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                  alt="this-is-image"
+                />
+              </div>
 
               <div class="category-content">
                 <h4 class="category-content__title">Khóa cửa thông minh</h4>
@@ -544,11 +609,12 @@
               </div>
             </a>
             <a href="#!" class="category-right__item">
-              <img
-                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
-                alt="this-is-image"
-                class="category-right__item-image"
-              />
+              <div class="category-right__item-image">
+                <img
+                  src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                  alt="this-is-image"
+                />
+              </div>
 
               <div class="category-content">
                 <h4 class="category-content__title">Khóa cửa thông minh</h4>
@@ -556,11 +622,12 @@
               </div>
             </a>
             <a href="#!" class="category-right__item">
-              <img
-                src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
-                alt="this-is-image"
-                class="category-right__item-image"
-              />
+              <div class="category-right__item-image">
+                <img
+                  src="https://admin.vienthongvina.com/storage/media/1tLdzKijaVmmbCPlwAVKfTugqSGwKLlCpuePfD2s.jpeg"
+                  alt="this-is-image"
+                />
+              </div>
 
               <div class="category-content">
                 <h4 class="category-content__title">Khóa cửa thông minh</h4>
@@ -828,9 +895,7 @@
               </div>
 
               <div class="product-content__bottom">
-                <h4 class="product-content__bottom-title">
-                  Camera Quan Sát
-                </h4>
+                <h4 class="product-content__bottom-title">Camera Quan Sát</h4>
                 <div class="product-content__bottom-price">
                   <span>3.190.000đ</span>
                   <s>3.400.000đ</s>
@@ -1089,12 +1154,10 @@
           <form class="support-form">
             <div class="support-form__input">
               <input required type="text" placeholder="Họ và tên" />
-              <span style="display: none">Họ và tên không hợp lệ</span>
             </div>
 
             <div class="support-form__input">
               <input required type="text" placeholder="Số điện thoại" />
-              <span style="display: none">Số điện thoại không hợp lệ</span>
             </div>
 
             <button type="text" class="btn">Nhận tư vấn ngay</button>
@@ -1267,7 +1330,7 @@
 
         <div class="copyright__social">
           <a href="#!" class="copyright__social-link">
-            <img src="./images/zalo.png" alt="this-is-icon" />
+            <img src="./images/icon-zalo.png" alt="this-is-icon" />
           </a>
           <a href="#!" class="copyright__social-link">
             <img src="./images/facebook.png" alt="this-is-icon" />
