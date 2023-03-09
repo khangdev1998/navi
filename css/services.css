@@ -17,6 +17,7 @@ html {
     Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
+    scroll-behavior: smooth;
 }
 :root {
   --primary-color: #ff5100;
@@ -572,6 +573,7 @@ html {
 }
 .header .header-bottom {
   padding: 50px 0 14px 0;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
 .header .header__container {
   display: flex;
@@ -608,6 +610,9 @@ html {
 .header .header-menu__item:last-child:hover .header-menuChildren {
   visibility: visible;
 }
+.header .header-menu__link--active {
+  color: var(--primary-color) !important;
+}
 .header .header-menu__link {
   display: inline-block;
   text-decoration: none;
@@ -623,7 +628,7 @@ html {
   transition: linear 0.2s;
 }
 .header .header-menu__login {
-  border-top: 1.5px solid #D9DBE1;
+  border-top: 1.5px solid #d9dbe1;
   padding-top: 20px;
   display: none;
 }
@@ -853,9 +858,35 @@ html {
   font-size: 18px;
   margin-top: 20px;
 }
+.pagination-list {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  float: right;
+  margin-top: 20px;
+}
+.pagination-item__link--active {
+  background: #050f5a;
+  color: var(--light-color) !important;
+}
+.pagination-item__link {
+  --size-item: 48px;
+  width: var(--size-item);
+  height: var(--size-item);
+  line-height: var(--size-item);
+  border-radius: var(--size-item);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 1.5px solid #d2d2d2;
+  color: #6b7280;
+}
+.pagination-item__link:hover {
+  border-color: #050f5a;
+}
 .product {
   background-color: #f3f4f6;
-  padding: 40px 0;
+  padding: 40px 0 90px 0;
 }
 .product .product-wrapper {
   display: flex;
@@ -909,7 +940,7 @@ html {
   color: #254edb;
 }
 .partner {
-  padding-top: 80px;
+  padding: 60px 0 40px;
   text-align: center;
 }
 .partner .owl-carousel:not(:last-child) {

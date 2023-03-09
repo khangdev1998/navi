@@ -573,6 +573,7 @@ html {
 }
 .header .header-bottom {
   padding: 50px 0 14px 0;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
 .header .header__container {
   display: flex;
@@ -608,6 +609,9 @@ html {
 }
 .header .header-menu__item:last-child:hover .header-menuChildren {
   visibility: visible;
+}
+.header .header-menu__link--active {
+  color: var(--primary-color) !important;
 }
 .header .header-menu__link {
   display: inline-block;

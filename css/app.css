@@ -572,6 +572,7 @@ html {
 }
 .header .header-bottom {
   padding: 50px 0 14px 0;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
 .header .header__container {
   display: flex;
@@ -623,7 +624,7 @@ html {
   transition: linear 0.2s;
 }
 .header .header-menu__login {
-  border-top: 1.5px solid #D9DBE1;
+  border-top: 1.5px solid #d9dbe1;
   padding-top: 20px;
   display: none;
 }

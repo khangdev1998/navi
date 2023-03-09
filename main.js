@@ -76,6 +76,24 @@ $(".slider .owl-carousel").owlCarousel({
   },
 });
 
+$(".project .owl-carousel").owlCarousel({
+  navText: [left, right],
+  loop: true,
+  margin: 30,
+  autoplay: true,
+  autoplayTimeout: 4200,
+  smartSpeed: 900,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    1000: {
+      items: 3,
+    },
+  },
+});
+
 const upTop = document.getElementById("up-top");
 
 function debounceFn(func, wait, immediate) {
@@ -135,3 +153,56 @@ iconSearch.onclick = function () {
     event.target.classList.remove("show");
   };
 };
+
+const numberValue = document.querySelector(".quantity__value");
+const btnPlus = document.querySelector(".quantity__plus");
+const btnMinus = document.querySelector(".quantity__minus");
+
+if (btnPlus && btnMinus) {
+  btnPlus.onclick = function () {
+    let number = numberValue.value;
+    number++;
+    numberValue.value = number;
+  };
+  btnMinus.onclick = function () {
+    let number = numberValue.value;
+    if (number <= 1) return;
+    number--;
+    numberValue.value = number;
+  };
+}
+
+const headerTop = document.querySelector(".header-top");
+const headerBottom = document.querySelector(".header-bottom");
+const tags = document.querySelector(".tags");
+const headerBottomHeight = headerBottom && headerBottom.offsetHeight;
+const headerTopHeight = headerTop && headerTop.offsetHeight;
+const scrollHeight = headerTopHeight + headerBottomHeight;
+
+if (tags) {
+  window.addEventListener(
+    "scroll",
+    debounceFn(function () {
+      const scrollY = window.pageYOffset;
+      if (scrollY >= scrollHeight) {
+        document.body.style.paddingTop = 56 + "px";
+        Object.assign(tags.style, {
+          position: "fixed",
+          top: headerTopHeight + "px",
+          left: "0",
+          width: "100%",
+          zIndex: "100",
+          animation: "fade 0.25s forwards 1",
+          background: "var(--light-color)",
+          boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+          padding: "16px 0",
+        });
+        headerBottom.style.visibility = "hidden";
+      } else {
+        tags.removeAttribute("style");
+        document.body.style.paddingTop = 0;
+        headerBottom.style.visibility = "visible";
+      }
+    }, 60)
+  );
+}
