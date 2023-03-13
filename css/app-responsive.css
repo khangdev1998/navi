@@ -54,6 +54,9 @@
   .header .header-group__phone {
     font-size: 14px;
   }
+  .header .header-submenu {
+    display: none !important;
+  }
   .header .header-menu {
     position: fixed;
     top: 0;

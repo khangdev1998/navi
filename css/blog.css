@@ -609,9 +609,6 @@ html {
 .header .header-menu__item:last-child:hover .header-menuChildren {
   visibility: visible;
 }
-.header .header-menu__link--active {
-  color: var(--primary-color) !important;
-}
 .header .header-menu__link {
   display: inline-block;
   text-decoration: none;
@@ -622,9 +619,134 @@ html {
   color: var(--dark-color);
   width: 100%;
 }
+.header .header-menu__link--active {
+  color: var(--primary-color);
+}
+.header .header-menu__link--submenu {
+  position: relative;
+}
+.header .header-menu__item:hover .header-submenu {
+  display: block;
+}
+.header .header-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--light-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 52px 0 30px 0;
+  width: 100%;
+  z-index: 99;
+  display: none;
+  animation: menuEffect 0.24s linear;
+}
+.header .header-submenu::before {
+  content: "";
+  position: absolute;
+  top: -1.2rem;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+@keyframes menuEffect {
+  from {
+    opacity: 0;
+    margin-top: -2.6rem;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+.header .header-main {
+  display: flex;
+  position: relative;
+}
+.header .header-submenu__heading {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 32px;
+}
+.header .header-submenu__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}
+.header .header-submenu__list > li {
+  width: fit-content;
+}
+.header .header-submenu__list a {
+  font-size: 18px;
+  line-height: 27px;
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 245px;
+}
+.header .header-submenu__list a:hover {
+  font-weight: 600;
+}
+.header .header-submenu__list ion-icon {
+  font-size: 20px;
+  display: none;
+  flex-shrink: 0;
+  animation: iconEffect 0.24s linear;
+}
+@keyframes iconEffect {
+  0% {
+    transform: rotate(-60deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.header .header-submenu__list ul {
+  position: absolute;
+  left: 19.6rem;
+  top: 0;
+  list-style: none;
+  display: none;
+  animation: fadeIn 0.24s linear;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    margin-left: -2.4rem;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+.header .header-submenu__list ul li:not(:last-child) {
+  margin-bottom: 24px;
+}
+.header .header-submenu__list ul li a {
+  font-size: 18px;
+  line-height: 27px;
+  display: inline-block;
+  width: fit-content;
+}
+.header .header-submenu__list ion-icon.active,
+.header-submenu__list ul.active {
+  display: inline-block;
+  visibility: visible;
+}
 .header .header-menu__link:hover {
   color: var(--primary-color);
   transition: linear 0.2s;
+}
+.header .header-submenu__image {
+  max-width: 344px;
+  width: 100%;
+}
+.header .header-submenu__image img {
+  max-width: 100%;
 }
 .header .header-menu__login {
   border-top: 1.5px solid #d9dbe1;

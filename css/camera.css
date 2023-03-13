@@ -855,19 +855,19 @@ html {
   background: #fdd835;
   text-align: center;
 }
-.tags {
+.category {
   padding: 30px 0 15px 0;
 }
-.tags .list-tags__item,
-.list-tags__dash {
+.category .list-category__item,
+.list-category__dash {
   font-size: 14px;
   color: #9ca3af;
   line-height: 21px;
 }
-.tags .list-tags__item {
+.category .list-category__item {
   text-decoration: none;
 }
-.tags .list-tags__dash {
+.category .list-category__dash {
   padding: 0 6px;
 }
 .product .product-wrapper {
