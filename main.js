@@ -1,29 +1,19 @@
-const left = `<img class="services-icon" src="./images/prev.png" alt="this-is-icon">`;
-const right = `<img class="services-icon" src="./images/next.png" alt="this-is-icon">`;
+const left = `<img class="slider-icon" src="./images/prev.png" alt="this-is-icon">`;
+const right = `<img class="slider-icon" src="./images/next.png" alt="this-is-icon">`;
 
-$(".services .owl-carousel").owlCarousel({
-  loop: true,
-  autoplay: true,
-  smartSpeed: 500,
-  margin: 30,
-  nav: true,
+$(".slider .owl-carousel").owlCarousel({
   navText: [left, right],
+  loop: true,
+  margin: 12,
+  nav: true,
   dots: true,
-  mouseDrag: false,
+  autoplay: false,
+  autoplayTimeout: 4200,
+  smartSpeed: 900,
   autoplayHoverPause: true,
-  autoplayTimeout: 4500,
   responsive: {
     0: {
       items: 1,
-    },
-    500: {
-      items: 2,
-    },
-    800: {
-      items: 3,
-    },
-    1200: {
-      items: 4,
     },
   },
 });
@@ -55,41 +45,6 @@ $(".partner .owl-carousel").owlCarousel({
     1200: {
       margin: 110,
       items: 6,
-    },
-  },
-});
-
-$(".slider .owl-carousel").owlCarousel({
-  navText: [left, right],
-  loop: true,
-  margin: 12,
-  nav: true,
-  dots: true,
-  autoplay: true,
-  autoplayTimeout: 4200,
-  smartSpeed: 900,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-  },
-});
-
-$(".project .owl-carousel").owlCarousel({
-  navText: [left, right],
-  loop: true,
-  margin: 30,
-  autoplay: true,
-  autoplayTimeout: 4200,
-  smartSpeed: 900,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    1000: {
-      items: 3,
     },
   },
 });
@@ -153,81 +108,6 @@ iconSearch.onclick = function () {
     event.target.classList.remove("show");
   };
 };
-
-const numberValue = document.querySelector(".quantity__value");
-const btnPlus = document.querySelector(".quantity__plus");
-const btnMinus = document.querySelector(".quantity__minus");
-
-if (btnPlus && btnMinus) {
-  btnPlus.onclick = function () {
-    let number = numberValue.value;
-    number++;
-    numberValue.value = number;
-  };
-  btnMinus.onclick = function () {
-    let number = numberValue.value;
-    if (number <= 1) return;
-    number--;
-    numberValue.value = number;
-  };
-}
-
-const headerTop = document.querySelector(".header-top");
-const headerBottom = document.querySelector(".header-bottom");
-const tags = document.querySelector(".tags");
-const headerBottomHeight = headerBottom && headerBottom.offsetHeight;
-const headerTopHeight = headerTop && headerTop.offsetHeight;
-const scrollHeight = headerTopHeight + headerBottomHeight;
-
-if (tags) {
-  window.addEventListener(
-    "scroll",
-    debounceFn(function () {
-      const scrollY = window.pageYOffset;
-      if (scrollY >= scrollHeight) {
-        document.body.style.paddingTop = 56 + "px";
-        Object.assign(tags.style, {
-          position: "fixed",
-          top: headerTopHeight + "px",
-          left: "0",
-          width: "100%",
-          zIndex: "100",
-          animation: "fade 0.25s forwards 1",
-          background: "var(--light-color)",
-          boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-          padding: "16px 0",
-        });
-        headerBottom.style.visibility = "hidden";
-      } else {
-        tags.removeAttribute("style");
-        document.body.style.paddingTop = 0;
-        headerBottom.style.visibility = "visible";
-      }
-    }, 60)
-  );
-}
-
-const tabItem = document.querySelectorAll(".product-tab__list-item");
-const tabContent = document.querySelectorAll(".product-list");
-
-Array.from(tabItem).forEach(function (item) {
-  item.addEventListener("click", function (event) {
-    if (item.classList.contains("product-tab__list-item--active")) return;
-
-    Array.from(tabItem).forEach((item) =>
-      item.classList.remove("product-tab__list-item--active")
-    );
-    event.target.classList.add("product-tab__list-item--active");
-
-    const numberData = event.target.dataset.tab;
-    Array.from(tabContent).forEach((item) => {
-      item.classList.remove("active");
-      if (item.getAttribute("data-tab") === numberData) {
-        item.classList.add("active");
-      }
-    });
-  });
-});
 
 const subMenuItem = document.querySelectorAll(
   ".header-submenu__list > li span"

@@ -152,7 +152,7 @@
     padding: unset;
   }
   .support .support-wrapper {
-    transform: unset;
+    margin-bottom: unset;
   }
   .footer {
     padding: 45px 0;
@@ -184,6 +184,9 @@
   .hero-image {
     display: none;
   }
+  .partner {
+    padding: 40px 0;
+  }
   .client::before {
     width: 100%;
   }
@@ -204,7 +207,7 @@
     margin-bottom: 25px;
   }
   .work {
-    padding-top: 50px;
+    padding: 20px 0;
   }
   .work .heading {
     margin-bottom: 12px;
@@ -214,6 +217,9 @@
   }
   .work .work-left__item-text {
     font-size: 18px;
+  }
+  .brand {
+    padding-top: 40px;
   }
   .support .support-form {
     flex-direction: column;

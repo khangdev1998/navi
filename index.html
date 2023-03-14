@@ -8,7 +8,8 @@
       VIỄN THÔNG VINA - Camera, Khóa cửa, Chuông cửa, Mạng LAN, Tổng đài điện
       thoại, Báo trộm báo cháy...
     </title>
-    <link rel="stylesheet" href="./css/app.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/app-responsive.css" />
     <link rel="icon" href="images/favicon.ico" type="image/gif" />
     <link
@@ -819,7 +820,7 @@
       <div class="container product__container">
         <div class="heading heading--dark">Sản phẩm nổi bật</div>
         <div class="product-wrapper">
-          <a href="#!" class="product-item">
+          <a href="camera.html" class="product-item">
             <div class="product-item__image">
               <img
                 src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
@@ -845,7 +846,7 @@
               </div>
             </div>
           </a>
-          <a href="#!" class="product-item">
+          <a href="camera.html" class="product-item">
             <div class="product-item__image">
               <img
                 src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
@@ -871,7 +872,7 @@
               </div>
             </div>
           </a>
-          <a href="#!" class="product-item">
+          <a href="camera.html" class="product-item">
             <div class="product-item__image">
               <img
                 src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
@@ -897,7 +898,7 @@
               </div>
             </div>
           </a>
-          <a href="#!" class="product-item">
+          <a href="camera.html" class="product-item">
             <div class="product-item__image">
               <img
                 src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
@@ -923,7 +924,7 @@
               </div>
             </div>
           </a>
-          <a href="#!" class="product-item">
+          <a href="camera.html" class="product-item">
             <div class="product-item__image">
               <img
                 src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
@@ -949,7 +950,7 @@
               </div>
             </div>
           </a>
-          <a href="#!" class="product-item">
+          <a href="camera.html" class="product-item">
             <div class="product-item__image">
               <img
                 src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
@@ -975,7 +976,7 @@
               </div>
             </div>
           </a>
-          <a href="#!" class="product-item">
+          <a href="camera.html" class="product-item">
             <div class="product-item__image">
               <img
                 src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
@@ -1001,7 +1002,7 @@
               </div>
             </div>
           </a>
-          <a href="#!" class="product-item">
+          <a href="camera.html" class="product-item">
             <div class="product-item__image">
               <img
                 src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
@@ -1027,7 +1028,7 @@
               </div>
             </div>
           </a>
-          <a href="#!" class="product-item">
+          <a href="camera.html" class="product-item">
             <div class="product-item__image">
               <img
                 src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
@@ -1053,7 +1054,7 @@
               </div>
             </div>
           </a>
-          <a href="#!" class="product-item">
+          <a href="camera.html" class="product-item">
             <div class="product-item__image">
               <img
                 src="https://admin.vienthongvina.com/storage/media/JMHXwa8RUHXJzK6nEHAq4rA6BNCzbEk1w3dBlXxE.png"
@@ -1526,6 +1527,34 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./main.js"></script>
+    <script>
+      $(".services .owl-carousel").owlCarousel({
+        loop: true,
+        autoplay: true,
+        smartSpeed: 500,
+        margin: 30,
+        nav: true,
+        navText: [left, right],
+        dots: true,
+        mouseDrag: false,
+        autoplayHoverPause: true,
+        autoplayTimeout: 4500,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          500: {
+            items: 2,
+          },
+          800: {
+            items: 3,
+          },
+          1200: {
+            items: 4,
+          },
+        },
+      });
+    </script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
