@@ -1,3 +1,6 @@
+.owl-theme .owl-dots {
+  margin-bottom: -3.2rem;
+}
 .hero {
   background: url("../images/hero-bg.jpg") 50%;
   background-repeat: no-repeat;
