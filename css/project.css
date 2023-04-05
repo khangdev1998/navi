@@ -58,6 +58,7 @@
   gap: 16px;
   box-shadow: 0 4px 8px rgb(1 11 50 / 10%);
   cursor: pointer;
+  background-color: white;
 }
 .articles .articles-content:hover {
   box-shadow: 0 8px 25px rgb(37 56 88 / 15%);
@@ -124,6 +125,7 @@
   box-shadow: 0 4px 8px rgb(1 11 50 / 10%);
   display: flex;
   gap: 10px;
+  background-color: white;
   cursor: pointer;
 }
 .articles .articles-sidebar__item:not(:last-child) {
