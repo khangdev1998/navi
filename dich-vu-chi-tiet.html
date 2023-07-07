@@ -842,10 +842,7 @@
         </div>
         <div class="client-right">
           <div class="client-right__item">
-            <img
-              src="https://vienthongvina.com/_nuxt/img/cup.2032325.svg"
-              alt="this-is-image"
-            />
+            <img src="images/client-1.svg" alt="this-is-image" />
             <div class="client-content">
               <h4>Dịch vụ hàng đầu</h4>
               <p>
@@ -856,10 +853,7 @@
             </div>
           </div>
           <div class="client-right__item">
-            <img
-              src="https://vienthongvina.com/_nuxt/img/cup.2032325.svg"
-              alt="this-is-image"
-            />
+            <img src="images/client-2.svg" alt="this-is-image" />
             <div class="client-content">
               <h4>Dịch vụ hàng đầu</h4>
               <p>
@@ -870,10 +864,7 @@
             </div>
           </div>
           <div class="client-right__item">
-            <img
-              src="https://vienthongvina.com/_nuxt/img/cup.2032325.svg"
-              alt="this-is-image"
-            />
+            <img src="images/client-3.svg" alt="this-is-image" />
             <div class="client-content">
               <h4>Dịch vụ hàng đầu</h4>
               <p>
@@ -884,10 +875,7 @@
             </div>
           </div>
           <div class="client-right__item">
-            <img
-              src="https://vienthongvina.com/_nuxt/img/cup.2032325.svg"
-              alt="this-is-image"
-            />
+            <img src="images/client-4.svg" alt="this-is-image" />
             <div class="client-content">
               <h4>Dịch vụ hàng đầu</h4>
               <p>
@@ -907,42 +895,27 @@
           <h1 class="heading heading--dark">Cam kết của Viễn Thông Vina</h1>
           <div class="vina-wrapper">
             <div class="vina-wrapper__item">
-              <img
-                src="https://vienthongvina.com/_nuxt/img/wallet.9c0405c.svg"
-                alt="this-is-image"
-              />
+              <img src="images/vina-1.svg" alt="this-is-image" />
               <p>Bán hàng đúng giá, đúng chất lượng.</p>
             </div>
             <div class="vina-wrapper__item">
-              <img
-                src="https://vienthongvina.com/_nuxt/img/cart-full.364424f.svg"
-                alt="this-is-image"
-              />
+              <img src="images/vina-2.svg" alt="this-is-image" />
               <p>
                 Bảo đảm hàng còn nguyên đai, nguyên kiện khi tới tận tay khách
                 hàng
               </p>
             </div>
             <div class="vina-wrapper__item">
-              <img
-                src="https://vienthongvina.com/_nuxt/img/shipping-express.c875194.svg"
-                alt="this-is-image"
-              />
+              <img src="images/vina-3.svg" alt="this-is-image" />
               <p>Bảo hành nhanh nhất cho khách hàng khi xảy ra sự cố</p>
             </div>
             <div class="vina-wrapper__item">
-              <img
-                src="https://vienthongvina.com/_nuxt/img/customer-support.6854412.svg"
-                alt="this-is-image"
-              />
+              <img src="images/vina-4.svg" alt="this-is-image" />
               <p>Tư vấn, hỗ trợ khách hàng 24/24</p>
             </div>
           </div>
           <div class="vina-banner">
-            <img
-              src="https://vienthongvina.com/_nuxt/img/customer-support.b6f4d33.png"
-              alt="this-is-banner"
-            />
+            <img src="images/customer-support.png" alt="this-is-banner" />
           </div>
         </div>
       </div>
@@ -1157,19 +1130,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./main.js"></script>
     <script>
+      // Tags List Fixed
+      function debounceFn(func, wait) {
+        let timeout;
+        return function executedFunction() {
+          const context = this;
+          const args = arguments;
+          const later = function () {
+            timeout = null;
+            func.apply(context, args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
+      }
+
       const headerTop = document.querySelector(".header-top");
       const headerBottom = document.querySelector(".header-bottom");
       const tags = document.querySelector(".tags");
-      const headerBottomHeight = headerBottom && headerBottom.offsetHeight;
       const headerTopHeight = headerTop && headerTop.offsetHeight;
-      const scrollHeight = headerTopHeight + headerBottomHeight;
 
       if (tags) {
         window.addEventListener(
           "scroll",
           debounceFn(function () {
             const scrollY = window.pageYOffset;
-            if (scrollY >= scrollHeight) {
+            const tagsDisplay = window.getComputedStyle(tags).display;
+            if (tagsDisplay === "none") return;
+
+            if (scrollY >= headerTopHeight) {
               document.body.style.paddingTop = 56 + "px";
               Object.assign(tags.style, {
                 position: "fixed",
@@ -1191,6 +1180,25 @@
           }, 60)
         );
       }
+
+      //Handle Scroll Click Element Tags List
+      document.querySelectorAll(".tags-item__link").forEach((item) => {
+        item.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          const hash = event.target.getAttribute("href");
+          const target = document.querySelector(hash);
+          const tagsHeight = document.querySelector(".tags").offsetHeight;
+          const gap = 12;
+
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - tagsHeight - gap, // cuộn đến vị trí top của phần tử mục tiêu và trừ đi chiều cao của tags, trừ thêm khoảng cách chỉ định
+              behavior: "smooth",
+            });
+          }
+        });
+      });
 
       // SLIDER
       $(".project .owl-carousel").owlCarousel({

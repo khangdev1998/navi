@@ -45,3 +45,11 @@
   margin-bottom: 32px;
   display: block;
 }
+@media only screen and (max-width:424px) {
+  .success .success-phone {
+    flex-direction: column;
+  }
+  .success .success-phone__border {
+    display: none;
+  }
+}

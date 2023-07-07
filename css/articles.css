@@ -98,3 +98,23 @@
   line-height: 24px;
   width: fit-content;
 }
+@media only screen and (max-width: 1023px) {
+  .news .news-list {
+    --columns: 2;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .articles .articles-heading, .news .heading{
+    font-size: 20px;
+    line-height: normal;
+  }
+  .news .heading{
+    margin-bottom: 20px;
+  }
+  .news .news-list {
+    --columns: 1;
+  }
+  .news .news-content{
+    padding: 12px;
+  }
+}

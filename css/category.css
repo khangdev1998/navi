@@ -52,6 +52,7 @@
   background: #e5e7eb;
   padding: 16px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 16px;
   margin: 16px 0 20px 0;
@@ -59,6 +60,7 @@
 }
 .productSecond .productSecond-tab__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 .productSecond .productSecond-tab__list-item {
@@ -85,4 +87,9 @@
 }
 .productSecond .productSecond-category__list-link--active {
   font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+  .productSecond .productSecond-tab {
+    justify-content: center;
+  }
 }

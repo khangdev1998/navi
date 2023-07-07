@@ -141,3 +141,45 @@ textarea {
 .productSecond .btn {
   margin-top: 30px;
 }
+
+@media only screen and (max-width: 1439px) {
+  .order .order-wrapper {
+    flex-direction: column;
+  }
+  .order .order-wrapper > * {
+    max-width: 100%;
+    width: 100%;
+  }
+  .productSecond .productSecond-list {
+    --columns: 3;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .order {
+    padding: 40px 0;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .order .btn {
+    width: 100%;
+    padding: 11px 20px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .productSecond .productSecond-list {
+    --columns: 1;
+  }
+  .order .order-row {
+    flex-direction: column;
+    margin: 0;
+  }
+  .order .order-right,
+  .order .item {
+    padding: 15px;
+  }
+  .order .order-colHalf {
+    width: 100%;
+    margin-inline: 0;
+  }
+}

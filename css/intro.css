@@ -16,16 +16,21 @@
 }
 .client .client__container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   max-width: 1376px;
+  --columns: 4;
+  --gap: 20px;
+  gap: var(--gap);
+  --spacing: calc(((var(--columns) - 1) * var(--gap)) / var(--columns));
 }
 .client .client-item {
+  width: calc((100% / var(--columns)) - var(--spacing));
   text-align: center;
   color: var(--light-color);
   font-weight: 600;
   font-size: 16px;
-  flex: 1;
 }
 .client .client-content__number {
   font-size: 28px;
@@ -59,4 +64,46 @@
 .block .block-image {
   width: 100%;
   max-width: 624px;
+}
+.block .block-image img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1023px) {
+  .content {
+    padding: 45px;
+    font-size: 24px;
+  }
+  .block .block__container {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .block .block-image {
+    max-width: 88%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .content {
+    padding: 20px;
+    font-size: 18px;
+  }
+  .client .client__container {
+    --columns: 2;
+    gap: 40px 20px;
+  }
+  .client-item img {
+    max-width: 50px;
+  }
+  .client .client-content__number {
+    padding: 4px 0 8px 0;
+  }
+  .block {
+    padding: 24px 0;
+  }
+  .block .block-content {
+    text-align: center;
+  }
+  .block .heading {
+    padding: 12px 0;
+  }
 }

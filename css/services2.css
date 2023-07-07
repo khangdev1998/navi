@@ -303,3 +303,121 @@
 .client .client-content p {
   color: #d1d5db;
 }
+@media only screen and (max-width: 1439px) {
+  .block .block__image {
+    width: 68%;
+    position: unset;
+    margin: 20px auto 0 auto;
+  }
+  .block .block-content {
+    max-width: 100%;
+    padding: 25px 0;
+    text-align: center;
+  }
+  .problem .problem__container {
+    gap: 20px;
+  }
+  .problem .heading,
+  .work .heading {
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+  .problem .description {
+    font-size: 16px;
+  }
+  .work .work-left {
+    padding-right: 20px;
+  }
+  .client {
+    border-radius: unset;
+  }
+  .client .client__container {
+    flex-direction: column;
+  }
+  .client .client-left {
+    margin: 0 auto;
+  }
+  .client .client-left__heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .client .client-right {
+    --gap: 20px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .tags {
+    display: none;
+  }
+  .problem .problem__container,
+  .work .work__container,
+  .camera .camera-wrapper {
+    flex-direction: column;
+  }
+  .problem .problem__image {
+    margin: 0 auto;
+  }
+  .problem .problem__content {
+    text-align: center;
+  }
+  .problem .description {
+    margin-bottom: 0;
+  }
+  .work .work-left {
+    padding-right: 0;
+  }
+  .work .work-right {
+    margin: 20px auto 0 auto;
+  }
+  .camera .camera-content {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .camera {
+    padding: 40px 0;
+  }
+  .camera .camera__heading {
+    font-size: 24px;
+    line-height: normal;
+  }
+  .client .client-right {
+    --columns: 1;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 424px) {
+  .block .heading,
+  .problem .heading,
+  .work .heading {
+    line-height: normal;
+    font-size: 20px;
+  }
+  .work .heading {
+    margin-bottom: 30px;
+  }
+  .block .description {
+    font-size: 16px;
+  }
+  .work {
+    padding: 20px 0;
+  }
+  .work .work-left {
+    text-align: center;
+  }
+  .work .work-left__item {
+    flex-direction: column;
+  }
+  .work .work-left__item-text {
+    font-size: 16px;
+  }
+  .work .work-left__item-text + .work-left__item-text {
+    margin-left: 0;
+  }
+  .work .btn {
+    margin-top: 10px;
+    position: unset;
+    transform: unset;
+  }
+}

@@ -309,3 +309,35 @@
 .partner .heading {
   font-size: 28px;
 }
+@media only screen and (max-width: 1439px) {
+  .product .product-wrapper,
+  .main .main-left__product {
+    flex-direction: column;
+  }
+  .product .product-wrapper > * {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .product .product-left,
+  .main .main__container {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .product .product-wrapper {
+    padding: 15px;
+  }
+  .product .product-content__button {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .main .main-left__buy {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .button-cart {
+    justify-content: center;
+  }
+}

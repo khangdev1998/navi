@@ -103,7 +103,8 @@ iconClose.onclick = function () {
   overlay.classList.remove("show");
 };
 iconSearch.onclick = function () {
-  searchMobile.classList.add("show");
+  searchMobile.classList.add("show")
+  searchMobile.querySelector('input').focus();
   searchMobile.onclick = function (event) {
     event.target.classList.remove("show");
   };

@@ -70,3 +70,28 @@
   text-decoration: none;
   color: #254edb;
 }
+@media only screen and (max-width: 1439px) {
+  .product .product-wrapper {
+    --columns: 3;
+    --gap: 20px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .product .product-wrapper {
+    --columns: 2;
+    --gap: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .banner {
+    padding: 45px 0;
+  }
+  .banner .banner-content__desc {
+    font-size: 16px;
+  }
+  .banner .banner-content__heading {font-size: 24px;}
+  .product .product-wrapper {
+    --columns: 1;
+    --gap: 25px;
+  }
+}
