@@ -40,3 +40,15 @@
 .question .question-full {
   margin-top: var(--gap);
 }
+@media only screen and (max-width: 767px) {
+  .question {
+    --gap: 20px;
+  }
+  .question .heading {
+    font-size: 28px;
+  }
+  .question .question-list {
+    --columns: 1;
+    padding-top: 28px;
+  }
+}

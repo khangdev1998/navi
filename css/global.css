@@ -1542,6 +1542,9 @@ html {
   }
 }
 @media only screen and (max-width: 1023px) {
+  #up-top {
+    display: none;
+  }
   .header .header-top__container {
     flex-direction: column;
   }

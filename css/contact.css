@@ -146,3 +146,21 @@ textarea {
 .form .form-right img {
   width: 100%;
 }
+@media only screen and (max-width: 1023px) {
+  .map .map-wrapper {
+    flex-direction: column;
+  }
+  .map .map-right {
+    max-width: 100%;
+  }
+  .form {
+    padding: 64px 0 0 0;
+  }
+  .form .form__container {
+    gap: 20px;
+    flex-direction: column-reverse;
+  }
+  .form .form-right {
+    max-width: 85%;
+  }
+}
