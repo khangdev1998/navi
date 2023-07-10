@@ -460,6 +460,11 @@
     <div class="productSecond">
       <div class="container productSecond__container">
         <div class="productSecond-left">
+          <img
+            class="productSecond-left__close"
+            src="./images/close.png"
+            alt="this-is-icon"
+          />
           <div class="productSecond-category">
             <h1>Danh mục sản phẩm</h1>
             <ul class="productSecond-category__list">
@@ -652,7 +657,13 @@
           <div class="productSecond-wrapper">
             <h1 class="productSecond-title">Camera Quan Sát</h1>
             <div class="productSecond-tab">
-              <span class="productSecond-tab__text">Sắp xếp theo</span>
+              <div class="productSecond-tab__main">
+                <span class="productSecond-tab__text">Sắp xếp theo:</span>
+                <div class="productSecond-tab__filter">
+                  <img src="./images/filter.svg" alt="this-is-icon" />
+                  Lọc sản phẩm
+                </div>
+              </div>
               <div class="productSecond-tab__list">
                 <div
                   class="productSecond-tab__list-item productSecond-tab__list-item--active"
@@ -1548,66 +1559,36 @@
         <h1 class="heading heading--dark">Đối tác của chúng tôi</h1>
         <div class="owl-carousel owl-theme">
           <div class="item">
-            <img
-              src="https://admin.vienthongvina.com/storage/media/B903VTbkKy0ljH2A47uTKkIvfbRvVTok4mUqxKgR.png"
-              alt="this-is-icon"
-            />
+            <img src="images/brand-1.png" alt="this-is-icon" />
           </div>
           <div class="item">
-            <img
-              src="https://admin.vienthongvina.com/storage/media/B903VTbkKy0ljH2A47uTKkIvfbRvVTok4mUqxKgR.png"
-              alt="this-is-icon"
-            />
+            <img src="images/brand-2.png" alt="this-is-icon" />
           </div>
           <div class="item">
-            <img
-              src="https://admin.vienthongvina.com/storage/media/B903VTbkKy0ljH2A47uTKkIvfbRvVTok4mUqxKgR.png"
-              alt="this-is-icon"
-            />
+            <img src="images/brand-3.png" alt="this-is-icon" />
           </div>
           <div class="item">
-            <img
-              src="https://admin.vienthongvina.com/storage/media/B903VTbkKy0ljH2A47uTKkIvfbRvVTok4mUqxKgR.png"
-              alt="this-is-icon"
-            />
+            <img src="images/brand-4.png" alt="this-is-icon" />
           </div>
           <div class="item">
-            <img
-              src="https://admin.vienthongvina.com/storage/media/B903VTbkKy0ljH2A47uTKkIvfbRvVTok4mUqxKgR.png"
-              alt="this-is-icon"
-            />
+            <img src="images/brand-5.jpeg" alt="this-is-icon" />
           </div>
         </div>
         <div class="owl-carousel owl-theme">
           <div class="item">
-            <img
-              src="https://admin.vienthongvina.com/storage/media/B903VTbkKy0ljH2A47uTKkIvfbRvVTok4mUqxKgR.png"
-              alt="this-is-icon"
-            />
+            <img src="images/brand-6.png" alt="this-is-icon" />
           </div>
           <div class="item">
-            <img
-              src="https://admin.vienthongvina.com/storage/media/B903VTbkKy0ljH2A47uTKkIvfbRvVTok4mUqxKgR.png"
-              alt="this-is-icon"
-            />
+            <img src="images/brand-7.png" alt="this-is-icon" />
           </div>
           <div class="item">
-            <img
-              src="https://admin.vienthongvina.com/storage/media/B903VTbkKy0ljH2A47uTKkIvfbRvVTok4mUqxKgR.png"
-              alt="this-is-icon"
-            />
+            <img src="images/brand-8.jpeg" alt="this-is-icon" />
           </div>
           <div class="item">
-            <img
-              src="https://admin.vienthongvina.com/storage/media/B903VTbkKy0ljH2A47uTKkIvfbRvVTok4mUqxKgR.png"
-              alt="this-is-icon"
-            />
+            <img src="images/brand-9.png" alt="this-is-icon" />
           </div>
           <div class="item">
-            <img
-              src="https://admin.vienthongvina.com/storage/media/B903VTbkKy0ljH2A47uTKkIvfbRvVTok4mUqxKgR.png"
-              alt="this-is-icon"
-            />
+            <img src="images/brand-10.png" alt="this-is-icon" />
           </div>
         </div>
       </div>
@@ -1813,6 +1794,23 @@
       </div>
     </div>
     <script>
+      const openFilter = document.querySelector(".productSecond-tab__filter");
+      const closeFilter = document.querySelector(".productSecond-left__close ");
+      const filter = document.querySelector(".productSecond-left");
+
+      closeFilter.addEventListener("click", () => {
+        showFilter();
+        document.documentElement.removeAttribute("style");
+      });
+      openFilter.addEventListener("click", () => {
+        showFilter();
+        document.documentElement.style.overflowY = "hidden";
+      });
+
+      function showFilter() {
+        filter.classList.toggle("active");
+      }
+
       const tabItem = document.querySelectorAll(
         ".productSecond-tab__list-item"
       );

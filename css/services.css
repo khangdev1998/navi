@@ -16,10 +16,10 @@
   font-size: 18px;
   margin-top: 20px;
 }
-.product {
+.services {
   padding: 40px 0 90px 0;
 }
-.product .product-wrapper {
+.services .services-wrapper {
   display: flex;
   flex-wrap: wrap;
   --h-image: 217px;
@@ -28,22 +28,22 @@
   --spacing: calc(((var(--columns) - 1) * var(--gap)) / var(--columns));
   gap: var(--gap);
 }
-.product .product-item {
+.services .services-item {
   width: calc((100% / var(--columns)) - var(--spacing));
   overflow: hidden;
   box-shadow: 0 16px 24px rgb(1 11 50 / 12%);
   cursor: pointer;
 }
-.product .product-item:hover {
+.services .services-item:hover {
   box-shadow: 0 8px 25px rgb(37 56 88 / 15%);
   transition: 0.24s linear;
 }
-.product .product-item img {
+.services .services-item img {
   object-fit: cover;
   width: 100%;
   height: var(--h-image);
 }
-.product .product-item__content {
+.services .services-item__content {
   padding: 16px;
   background: var(--light-color);
   height: calc(100% - var(--h-image));
@@ -51,7 +51,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.product .product-item__content h2 {
+.services .services-item__content h2 {
   font-size: 16px;
   margin-bottom: 16px;
   display: -webkit-box;
@@ -61,23 +61,23 @@
   text-overflow: ellipsis;
   word-break: break-word;
 }
-.product .product-item__content h2,
-.product-item__content a {
+.services .services-item__content h2,
+.services-item__content a {
   font-weight: 600;
   line-height: 24px;
 }
-.product .product-item__content a {
+.services .services-item__content a {
   text-decoration: none;
   color: #254edb;
 }
 @media only screen and (max-width: 1439px) {
-  .product .product-wrapper {
+  .services .services-wrapper {
     --columns: 3;
     --gap: 20px;
   }
 }
 @media only screen and (max-width: 1023px) {
-  .product .product-wrapper {
+  .services .services-wrapper {
     --columns: 2;
     --gap: 15px;
   }
@@ -90,7 +90,7 @@
     font-size: 16px;
   }
   .banner .banner-content__heading {font-size: 24px;}
-  .product .product-wrapper {
+  .services .services-wrapper {
     --columns: 1;
     --gap: 25px;
   }
