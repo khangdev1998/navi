@@ -1558,7 +1558,14 @@ html {
   width: 136px;
   height: 102px;
 }
-
+.copyright__text a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.24s linear;
+}
+.copyright__text a:hover {
+  color: var(--primary-color);
+}
 /* Responsive all screen laptop,tablet,mobile */
 @media only screen and (max-width: 1440px) {
   .container {

@@ -97,14 +97,16 @@ const searchMobile = document.querySelector(".search-mobile");
 iconMenu.onclick = function () {
   headerMenu.classList.add("active");
   overlay.classList.add("show");
+  document.documentElement.style.overflowY = "hidden";
 };
 iconClose.onclick = function () {
   headerMenu.classList.remove("active");
   overlay.classList.remove("show");
+  document.documentElement.removeAttribute("style");
 };
 iconSearch.onclick = function () {
-  searchMobile.classList.add("show")
-  searchMobile.querySelector('input').focus();
+  searchMobile.classList.add("show");
+  searchMobile.querySelector("input").focus();
   searchMobile.onclick = function (event) {
     event.target.classList.remove("show");
   };
