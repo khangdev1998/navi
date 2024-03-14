@@ -126,7 +126,6 @@
 }
 .services .services-item {
   background-color: var(--light-color);
-  cursor: pointer;
 }
 .services .services-item__image {
   height: var(--h-image);
